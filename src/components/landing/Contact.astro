@@ -1,0 +1,31 @@
+---
+import MaxWidthWrapper from "../MaxWidthWrapper.astro";
+import ContactForm from "./ContactForm";
+---
+
+<section id="contact">
+  <MaxWidthWrapper
+    className="flex max-w-screen-xl flex-col xl:flex-row items-center justify-center gap-10 py-20 lg:justify-between lg:gap-20"
+  >
+    <div class="relative flex flex-col items-end gap-10">
+      <h2
+        class="lg::text-6xl w-full text-center text-4xl font-bold md:text-5xl xl:text-left"
+      >
+        Got a project in <br />
+        <span class="text-primary">mind?</span>
+      </h2>
+
+      <img
+        src="/going-up.webp"
+        alt="Going up"
+        class="hidden w-full max-w-[280px] xl:flex"
+      />
+      <img
+        src="/arrow2.svg"
+        alt="Going up"
+        class="absolute -left-10 bottom-40 hidden rotate-[160deg] xl:flex"
+      />
+    </div>
+    <ContactForm client:load />
+  </MaxWidthWrapper>
+</section>

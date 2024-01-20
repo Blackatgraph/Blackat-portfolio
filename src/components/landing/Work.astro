@@ -1,0 +1,92 @@
+---
+import MaxWidthWrapper from "../MaxWidthWrapper.astro";
+
+const projects: {
+  title: string;
+  img: string;
+  width: string;
+  height: string;
+}[] = [
+  {
+    title: "Project 1",
+    img: "/projects/1.webp",
+    width: "1600",
+    height: "1435",
+  },
+  {
+    title: "Project 2",
+    img: "/projects/2.webp",
+    width: "1818",
+    height: "1117",
+  },
+  {
+    title: "Project 3",
+    img: "/projects/3.webp",
+    width: "1500",
+    height: "2808",
+  },
+  {
+    title: "Project 4",
+    img: "/projects/4.webp",
+    width: "1600",
+    height: "1600",
+  },
+  {
+    title: "Project 5",
+    img: "/projects/5.webp",
+    width: "1600",
+    height: "1600",
+  },
+  {
+    title: "Project 6",
+    img: "/projects/6.webp",
+    width: "1600",
+    height: "1200",
+  },
+];
+---
+
+<section id="work" class="bg-doodle-items mt-40 bg-cover py-20">
+  <MaxWidthWrapper className="flex min-h-screen items-center justify-center">
+    <div class="flex w-full max-w-screen-lg flex-col gap-16">
+      <h2 class="lg::text-6xl text-4xl font-bold md:text-5xl">
+        My recent <span class="text-primary">works</span>
+      </h2>
+
+      <div
+        class="pswp-gallery pswp-gallery--single-column grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3"
+        id="gallery--getting-started"
+      >
+        {
+          projects.map((project) => (
+            <a
+              href={project.img}
+              data-pswp-width="1080"
+              data-pswp-height="1080"
+              target="_blank"
+            >
+              <div class="bg-bg-foreground/40 flex h-full w-full items-center justify-center rounded-lg p-5 backdrop-blur-sm">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  class="w-full rounded"
+                />
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </MaxWidthWrapper>
+</section>
+
+<script>
+  import PhotoSwipeLightbox from "photoswipe/lightbox";
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: "#gallery--getting-started",
+    children: "a",
+    pswpModule: () => import("photoswipe"),
+  });
+  lightbox.init();
+</script>

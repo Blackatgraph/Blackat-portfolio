@@ -1,0 +1,44 @@
+---
+import MaxWidthWrapper from "../MaxWidthWrapper.astro";
+---
+
+<MaxWidthWrapper>
+  <section
+    id="about"
+    class="flex min-h-screen w-full flex-col items-center justify-center gap-20 py-40 lg:flex-row lg:justify-between"
+  >
+    <div class="relative flex w-full min-w-[300px] flex-col gap-4">
+      <img
+        src="/music-draw.svg"
+        alt="Music draw"
+        class="absolute -top-36 left-10 -z-10"
+      />
+      <img
+        src="/lightbulb-draw.svg"
+        alt="Music draw"
+        class="absolute -top-14 right-0 -z-10"
+      />
+      <img
+        src="/arrow2.svg"
+        alt="Music draw"
+        class="absolute -bottom-60 right-32 -z-10"
+      />
+
+      <h2 class="lg::text-6xl text-4xl font-bold md:text-5xl">
+        About <span class="text-primary">me</span>
+      </h2>
+      <p class="text-text-foreground text-pretty">
+        Hello! and welcome to Blackat Graph, your creative design company! At
+        Blackat Graph we specialize in offering high-quality design services
+        that will help your business stand out and leave a lasting impression on
+        your customers. Our team of passionate and talented designers are
+        dedicated to creating innovative and effective visual solutions for your
+        design needs.
+      </p>
+    </div>
+
+    <div class="w-full">
+      <img src="/about-img.webp" alt="About me" class="" />
+    </div>
+  </section>
+</MaxWidthWrapper>

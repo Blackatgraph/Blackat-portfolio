@@ -1,0 +1,36 @@
+---
+import MaxWidthWrapper from "../MaxWidthWrapper.astro";
+---
+
+<MaxWidthWrapper>
+  <section
+    class="flex min-h-screen w-full flex-col-reverse items-center justify-center gap-8 py-20 pt-40 lg:flex-row lg:justify-evenly lg:gap-14"
+  >
+    <div class="relative flex flex-col gap-6">
+      <img
+        src="/arrow.svg"
+        class="absolute -left-20 bottom-0 -z-10 hidden w-[60px] rotate-[-5deg] sm:block"
+      />
+      <h1 class="text-5xl font-bold tracking-wide sm:text-6xl lg:text-7xl">
+        GRAPHIC <br />
+        <span class="text-primary">DESIGNER</span>
+      </h1>
+      <div class="flex gap-3 md:gap-5">
+        <a
+          href="/#contact"
+          class="bg-primary hover:bg-primary/80 rounded-full px-6 py-2 text-sm font-semibold text-white transition sm:text-base"
+        >
+          Hire me
+        </a>
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          class="bg-bg-foreground hover:bg-bg-foreground/80 rounded-full px-6 py-2 text-sm font-semibold text-white transition sm:text-base"
+        >
+          Download CV
+        </a>
+      </div>
+    </div>
+    <img src="/hero-draw.webp" class="max-w-[280px] sm:max-w-[320px]" />
+  </section>
+</MaxWidthWrapper>
